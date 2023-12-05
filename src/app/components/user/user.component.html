@@ -1,0 +1,20 @@
+<section>             <!-- /* Ejemplo de @Input parte4  [ocuppation]="userOcuppation" */-->
+<h1>Hello {{ Username }}, you are a {{ occupation }}</h1>
+@if(doesUserExists){
+<p>¡Felicitaciones! ¿Existe el usuario?</p>
+}@else{
+<p>We're sorry, but we hace doubds about your existense</p>
+}
+</section>
+<section>
+<!-- @for  2-->
+<h2>Él es tu sistema operativo.</h2>
+<ul>
+@for ( os of operatingSystems ; track os .id) {
+  <!-- <li>{{ user.name }}</li>   -- parte del ejemplo @for-->
+  <li (mouseover)="onMouseOver(os.name)">{{ os.name }}</li><!--ejemplo de evento handling paso 1-->
+}
+</ul>
+<!-- Property binding 1 / la barra -->
+<div class="editar-div" [contentEditable]="isEditable"></div>
+</section>
